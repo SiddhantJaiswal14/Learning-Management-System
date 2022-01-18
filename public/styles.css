@@ -81,6 +81,10 @@ input {
   font-size: 1em;
   width: 100%;
 }
+.required:after {
+  content: " *";
+  color: red;
+}
 label {
   display: block;
   margin: 20px 0 10px;
