@@ -326,6 +326,62 @@ iframe {
 }
 /* courses ends */
 
+/* add or edit starts*/
+
+.create-header {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 3rem;
+}
+
+.add-form {
+  /* max-width: 360px; */
+  width: 60%;
+  margin: 2rem auto;
+  border: 3px solid lightgray;
+}
+
+.add-form .row {
+  /* display: flex;
+  justify-content: space-between; */
+  margin: 20px 0;
+}
+
+.add-form label {
+  font-size: 2rem;
+}
+
+/* .add-form .to-add {
+  display: flex;
+  justify-content: space-between;
+} */
+
+.desc-inp {
+  width: 80%;
+  margin: 10px auto;
+  /* height: 1.5rem; */
+  padding: 6px 15px;
+}
+
+.desc-label {
+  padding-left: 15px;
+}
+
+.add-form select {
+  width: 30%;
+}
+
+.add-form button {
+  border-width: 0;
+  /* text-transform: uppercase; */
+  /* font-weight: bold; */
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  margin: 10px 15px;
+}
+
+/* add or edit ends */
+
 .required:after {
   content: " *";
   color: red;
@@ -418,13 +474,14 @@ footer {
     display: flex;
     /* margin: 2.5% 5% 0 5%; */
     padding: 1.5rem;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     /* align-items: flex-end; */
     /* margin-bottom: 120px; */
   }
   .nav-header ul {
     display: flex;
     align-items: center;
+    /* justify-content: flex-end; */
   }
   /* nav li {
     margin-left: 20px;
@@ -657,6 +714,70 @@ footer {
     margin: 7px 0;
   }
   /* courses ends */
+
+  /* add or edit starts*/
+
+  .create-header {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  .add-form {
+    /* max-width: 360px; */
+    width: 90%;
+    margin: 2rem auto;
+    border: 1px solid lightgray;
+  }
+
+  .add-form .row {
+    /* display: flex;
+  justify-content: space-between; */
+    margin: 20px 0;
+  }
+
+  .add-form label {
+    font-size: 1.7rem;
+    display: block;
+    text-align: center;
+  }
+
+  .desc-inp {
+    width: 88%;
+    margin: 10px 20px;
+    /* height: 1.5rem; */
+    padding: 6px 15px;
+  }
+
+  .desc-label {
+    padding-left: 15px;
+  }
+
+  .add-form select {
+    width: 50%;
+    margin: 8px auto;
+    display: block;
+    text-align: center;
+  }
+
+  .add-form .dead-date {
+    width: 50%;
+    margin: 8px auto;
+    display: block;
+    text-align: center;
+  }
+
+  .add-form button {
+    border-width: 0;
+    display: block;
+    /* text-transform: uppercase; */
+    /* font-weight: bold; */
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    margin: 10px auto;
+  }
+
+  /* add or edit ends */
 
   footer {
     text-align: center;

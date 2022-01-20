@@ -1,6 +1,6 @@
 const { Router } = require("express");
 const authController = require("../controllers/authController");
-const User = require("../models/User");
+const { User } = require("../models/User");
 
 const router = Router();
 
@@ -9,6 +9,8 @@ router.post("/signup", authController.signup_post);
 router.get("/login", authController.login_get);
 router.post("/login", authController.login_post);
 router.get("/logout", authController.logout_get);
+router.get("/addOrEdit", authController.addOrEdit_get);
+router.post("/addOrEdit", authController.addOrEdit_post);
 router.post("/profile", async (req, res) => {
   const { profession, address, phone, age, skills } = req.body;
   //   console.log(req.body._id);

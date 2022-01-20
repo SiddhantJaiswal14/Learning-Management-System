@@ -1,6 +1,21 @@
 const mongoose = require("mongoose");
 const { isEmail } = require("validator");
 const bcrypt = require("bcrypt");
+
+const taskSchema = new mongoose.Schema({
+  user: {
+    type: String,
+  },
+  description: {
+    type: String,
+  },
+  completed: {
+    type: String,
+  },
+  deadline: {
+    type: String,
+  },
+});
 const userSchema = new mongoose.Schema({
   firstname: {
     type: String,
@@ -70,5 +85,6 @@ userSchema.statics.login = async function (email, password) {
 };
 
 const User = mongoose.model("user", userSchema);
+const Task = mongoose.model("task", taskSchema);
 
-module.exports = User;
+module.exports = { User, Task };
