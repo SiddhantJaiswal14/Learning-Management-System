@@ -1,0 +1,97 @@
+<%- include('partials/header'); -%>
+
+<form class="profile-form">
+  <div class="profile-top">
+    <div class="show-img">
+      <img src="/images/avatar-1577909_960_720.png" alt="Avatar" />
+    </div>
+    <label style="display: inline-block" for="file" class="upload-img"
+      >Change Image</label
+    >
+    <input id="file" style="visibility: hidden" type="file" />
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <h3 class="profile-name"><%= user.firstname%> <%= user.lastname %></h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 col-md-6">
+      <label for="email">Email</label>
+      <input type="text" value="<%= user.email%>" readOnly />
+    </div>
+    <div class="col-12 col-md-6">
+      <label for="profession">Profession</label>
+      <input type="text" value="" name="profession" />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 col-md-2">
+      <label for="phone">Contact No.</label>
+      <input
+        type="text"
+        minlength="10"
+        maxlength="10"
+        value="<%= user.phone%>"
+        name="phone"
+      />
+    </div>
+    <div class="col-12 col-md-8">
+      <label for="address">Address</label>
+      <input type="text" value="" name="address" />
+    </div>
+    <div class="col-12 col-md-2">
+      <label for="age">Age</label>
+      <input type="text" value="<%= user.age%>" name="age" />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 col-md-12 offset-md-2">
+      <label for="skills">Skills</label>
+      <input type="text" name="skills" value="<%= user.skills%>" />
+    </div>
+  </div>
+  <button class="bttn">Update</button>
+</form>
+
+<script>
+  const form = document.querySelector("form");
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    // get the values
+    const profession = form.profession.value;
+    const address = form.address.value;
+    const phone = form.phone.value;
+    const skills = form.skills.value;
+    const age = form.age.value;
+    const userid = user.id;
+    console.log(userid);
+    try {
+      const res = await fetch("/profile", {
+        method: "POST",
+        body: JSON.stringify({
+          profession,
+          address,
+          age,
+          phone,
+          skills,
+        }),
+        headers: { "Content-Type": "application/json" },
+      });
+      // const data = await res.json();
+      // console.log(data);
+      // if (data.errors) {
+      //   emailError.textContent = data.errors.email;
+      //   passwordError.textContent = data.errors.password;
+      // }
+      // if (data.user) {
+      //   location.assign("/");
+      // }
+    } catch (err) {
+      console.log(err);
+    }
+  });
+</script>
+
+<%- include('partials/footer'); -%>

@@ -1,0 +1,214 @@
+<%- include('partials/header'); -%>
+
+<h2 class="course-header">Course Content</h2>
+<!-- <div class="courses-card">
+  <h5 class="card-header">Lesson 1: Web Development Fundamentals</h5>
+  <div class="card-body">
+    <h5 class="card-title">Special title treatment</h5>
+    <p class="card-text">
+      With supporting text below as a natural lead-in to additional content.
+    </p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+<div class="courses-card">
+  <h5 class="card-header">Lesson 2: HTML</h5>
+  <div class="card-body">
+    <h5 class="card-title">Special title treatment</h5>
+    <p class="card-text">
+      With supporting text below as a natural lead-in to additional content.
+    </p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+<div class="courses-card">
+  <h5 class="card-header">Lesson 3: CSS</h5>
+  <div class="card-body">
+    <h5 class="card-title">Special title treatment</h5>
+    <p class="card-text">
+      With supporting text below as a natural lead-in to additional content.
+    </p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+<div class="courses-card">
+  <h5 class="card-header">Lesson 4: Javascript</h5>
+  <div class="card-body">
+    <h5 class="card-title">Special title treatment</h5>
+    <p class="card-text">
+      With supporting text below as a natural lead-in to additional content.
+    </p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div> -->
+
+<div id="accordion">
+  <div class="courses-card">
+    <div class="card-header" id="headingOne">
+      <h5 class="mb-0">
+        <button
+          class="btn btn-link"
+          data-toggle="collapse"
+          data-target="#collapseOne"
+          aria-expanded="true"
+          aria-controls="collapseOne"
+        >
+          Lesson 1: Web Development Fundamentals
+        </button>
+      </h5>
+    </div>
+
+    <div
+      id="collapseOne"
+      class="collapse"
+      aria-labelledby="headingOne"
+      data-parent="#accordion"
+    >
+      <div class="card-body">
+        <h5>
+          In this video we wil discuss the technologies and responsabilities
+          needed to become a front end, back end and full stack web developer.
+        </h5>
+        <div class="course-video">
+          <iframe
+            height="315"
+            src="https://www.youtube.com/embed/pkdgVYehiTE"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <button class="bttn">Mark as Completed</button>
+      </div>
+    </div>
+  </div>
+  <div class="courses-card">
+    <div class="card-header" id="headingTwo">
+      <h5 class="mb-0">
+        <button
+          class="btn btn-link collapsed"
+          data-toggle="collapse"
+          data-target="#collapseTwo"
+          aria-expanded="false"
+          aria-controls="collapseTwo"
+        >
+          Lesson 2: HTML
+        </button>
+      </h5>
+    </div>
+    <div
+      id="collapseTwo"
+      class="collapse"
+      aria-labelledby="headingTwo"
+      data-parent="#accordion"
+    >
+      <div class="card-body">
+        <h5>
+          In this we will cover the HTML from basics to advanced. HTML is used
+          to structure webpages. It includes tables, headings, forms and lot
+          more.
+        </h5>
+        <div class="course-video">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/pQN-pnXPaVg"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <button class="bttn">Mark as Completed</button>
+      </div>
+    </div>
+  </div>
+  <div class="courses-card">
+    <div class="card-header" id="headingThree">
+      <h5 class="mb-0">
+        <button
+          class="btn btn-link collapsed"
+          data-toggle="collapse"
+          data-target="#collapseThree"
+          aria-expanded="false"
+          aria-controls="collapseThree"
+        >
+          Lesson 3: CSS
+        </button>
+      </h5>
+    </div>
+    <div
+      id="collapseThree"
+      class="collapse"
+      aria-labelledby="headingThree"
+      data-parent="#accordion"
+    >
+      <div class="card-body">
+        <h5>
+          In this video we will cover the CSS from basics to advanced.
+          CSS(Cascading Style Sheet) is used to style webpages. It includes
+          editing fonts, colours, backgrounds, animations and lot more.
+        </h5>
+        <div class="course-video">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/1Rs2ND1ryYc"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <button class="bttn">Mark as Completed</button>
+      </div>
+    </div>
+  </div>
+  <div class="courses-card">
+    <div class="card-header" id="headingFour">
+      <h5 class="mb-0">
+        <button
+          class="btn btn-link collapsed"
+          data-toggle="collapse"
+          data-target="#collapseFour"
+          aria-expanded="false"
+          aria-controls="collapseFour"
+        >
+          Lesson 4: Javascript
+        </button>
+      </h5>
+    </div>
+    <div
+      id="collapseFour"
+      class="collapse"
+      aria-labelledby="headingFour"
+      data-parent="#accordion"
+    >
+      <div class="card-body">
+        <h5>
+          In this we will cover the Javascript from basics to advanced.
+          Javascript is used to add functionality to the webpages. It includes
+          events that involve user interaction like submitting forms,
+          accordions, slide show features, etc.
+        </h5>
+        <div class="course-video">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/PkZNo7MFNFg"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <button class="bttn">Mark as Completed</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<%- include('partials/footer'); -%>

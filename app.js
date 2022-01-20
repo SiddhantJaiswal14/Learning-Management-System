@@ -26,4 +26,5 @@ mongoose
 app.get("*", checkUser);
 app.get("/", (req, res) => res.render("home"));
 app.get("/courses", requireAuth, (req, res) => res.render("courses"));
+app.get("/profile", requireAuth, (req, res) => res.render("profile"));
 app.use(authRoutes);

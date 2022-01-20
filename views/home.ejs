@@ -1,10 +1,13 @@
 <%- include('partials/header'); -%>
 
-<header>
+<header class="home-header">
+  <% if(user){%>
+  <h3 class="hi-text">Hello <%= user.firstname%> <%= user.lastname %>!!</h3>
+  <% } %>
   <div class="headings">
     <h1>Welcome to Learning Management System :)</h1>
     <h3>Learn free courses and master web development in 8 weeks.</h3>
-    <a href="/courses" class="btn">Get Started ></a>
+    <a href="/courses" class="bttn">Get Started ></a>
   </div>
 </header>
 

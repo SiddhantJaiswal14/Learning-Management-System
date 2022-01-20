@@ -1,16 +1,48 @@
 <%- include('partials/header'); -%>
 
-<form>
+<form class="signup-form">
   <h2>Sign up</h2>
-  <label for="fullname">Full Name</label>
-  <input type="text" name="fullname" placeholder="Full Name" />
-  <label class="required" for="email">Email</label>
-  <input type="text" name="email" placeholder="example@email.com" required />
-  <div class="email error"></div>
-  <label class="required" for="password">Password</label>
-  <input type="password" name="password" required />
-  <div class="password error"></div>
-  <button>Sign up</button>
+  <div class="row">
+    <div class="col-12 col-md-6">
+      <label class="required" for="firstname">First Name</label>
+      <input type="text" name="firstname" value="" />
+    </div>
+    <div class="col-12 col-md-6">
+      <label class="required" for="lastname">Last Name</label>
+      <input type="text" name="lastname" value="" />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 col-md-6">
+      <label class="required" for="email">Email</label>
+      <input
+        type="text"
+        name="email"
+        placeholder="example@email.com"
+        required
+      />
+      <div class="email error"></div>
+    </div>
+    <div class="col-12 col-md-6">
+      <label class="required" for="password">Password</label>
+      <input type="password" name="password" required />
+      <div class="password error"></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 col-md-6">
+      <label class="required" for="phone">Contact No.</label>
+      <input type="text" minlength="10" maxlength="10" name="phone" value="" />
+    </div>
+    <div class="col-12 col-md-6">
+      <label for="age">Age</label>
+      <input type="text" name="age" value="" />
+    </div>
+  </div>
+
+  <label for="skills">Skills</label>
+  <input type="text" name="skills" value="" />
+  <button class="bttn">Sign up</button>
 </form>
 
 <script>
@@ -27,11 +59,23 @@
     // get the values
     const email = form.email.value;
     const password = form.password.value;
-    const fullname = form.fullname.value;
+    const firstname = form.firstname.value;
+    const lastname = form.lastname.value;
+    const phone = form.phone.value;
+    const skills = form.skills.value;
+    const age = form.age.value;
     try {
       const res = await fetch("/signup", {
         method: "POST",
-        body: JSON.stringify({ email, password, fullname }),
+        body: JSON.stringify({
+          email,
+          password,
+          firstname,
+          lastname,
+          age,
+          phone,
+          skills,
+        }),
         headers: { "Content-Type": "application/json" },
       });
       const data = await res.json();

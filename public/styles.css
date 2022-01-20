@@ -34,7 +34,12 @@ ul {
 a {
   text-decoration: none;
 }
-nav {
+a:hover {
+  text-decoration: none;
+}
+
+/* nav-css starts */
+.nav-header {
   display: flex;
   /* margin: 2.5% 5% 0 5%; */
   padding: 2rem 2rem;
@@ -42,75 +47,29 @@ nav {
   /* align-items: flex-end; */
   /* margin-bottom: 120px; */
 }
-nav ul {
+
+.nav-header h1 {
+  font-weight: 900;
+}
+.nav-header ul {
   display: flex;
   align-items: center;
 }
-nav li {
+.nav-header li {
   margin-left: 20px;
 }
-nav li a {
+.nav-header li a {
   text-transform: uppercase;
   font-weight: 700;
-  font-size: 0.8em;
+  font-size: 1.5rem;
   display: block;
   padding: 10px 16px;
   letter-spacing: 2px;
 }
-.btn {
-  border-radius: 36px;
-  background: #90ee90;
-}
-form h2 {
-  font-size: 2.4em;
-  font-weight: 900;
-  margin-bottom: 40px;
-}
-form {
-  width: 360px;
-  margin: 0 auto;
-  padding: 30px;
-  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  background: white;
-}
-input {
-  padding: 10px 12px;
-  border-radius: 4px;
-  border: 1px solid #ddd;
-  font-size: 1em;
-  width: 100%;
-}
-.required:after {
-  content: " *";
-  color: red;
-}
-label {
-  display: block;
-  margin: 20px 0 10px;
-}
-button {
-  margin-top: 30px;
-  border-radius: 36px;
-  background: #90ee90;
-  border: 0;
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 0.8em;
-  display: block;
-  padding: 10px 16px;
-  letter-spacing: 2px;
-}
-.error {
-  color: red;
-  margin: 10px 2px;
-  font-size: 0.8em;
-  font-weight: bold;
-}
-.hi-text {
-  text-align: center;
-  margin-top: 20px;
-}
+
+/* nav css ends */
+
+/* home css starts*/
 .headings {
   /* margin: 5% 10%; */
   display: flex;
@@ -122,32 +81,291 @@ button {
 }
 
 .headings h1 {
-  font-size: 3rem;
+  font-size: 4rem;
   /* margin-top: 4rem; */
   margin-bottom: 10px;
 }
 .headings h3 {
-  font-size: 1.6em;
+  font-size: 2em;
   margin-bottom: 10px;
   margin-left: 2px;
   color: #999;
 }
-.headings .btn {
+
+.headings a {
   margin-top: 20px;
   padding: 12px 18px;
   text-transform: uppercase;
   font-weight: bold;
   display: inline-block;
+  font-size: 1.5em;
+}
+
+/* home css ends */
+
+.bttn {
+  padding: 10px 16px;
+  border-radius: 36px;
+  background: #90ee90;
+}
+
+/* login form starts */
+
+.login-form {
+  width: 360px;
+  margin: 0 auto;
+  padding: 30px;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background: white;
+}
+
+.login-form h2 {
+  font-size: 3em;
+  font-weight: 900;
+  margin-bottom: 40px;
+}
+
+.login-form label {
+  font-size: 1.8rem;
+  display: block;
+  margin: 20px 0 10px;
+}
+
+.login-form input {
+  padding: 10px 12px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  font-size: 1.5em;
+  width: 100%;
+}
+
+.login-form button {
+  border-width: 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+/* login form ends   */
+
+/* signup form starts */
+.signup-form {
+  width: 60%;
+  margin: 0 auto;
+  padding: 30px;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background: white;
+}
+
+.signup-form h2 {
+  font-size: 3em;
+  font-weight: 900;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.signup-form label {
+  font-size: 1.8rem;
+  display: block;
+  margin: 20px 0 10px;
+}
+
+.signup-form input {
+  padding: 10px 12px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  font-size: 1.5em;
+  width: 100%;
+}
+
+.signup-form button {
+  border-width: 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  margin-top: 20px;
+  letter-spacing: 2px;
+}
+
+/* signup ends  */
+
+/* profile form starts */
+.profile-form {
+  width: 80%;
+  margin: 0 auto;
+  padding: 30px;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background: white;
+}
+
+.profile-name {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+}
+/* .profile-form h2 {
+  font-size: 3em;
+  font-weight: 900;
+  margin-bottom: 20px;
+  text-align: center;
+} */
+
+.profile-form label {
+  font-size: 1.8rem;
+  /* display: block; */
+  margin: 20px 0 10px;
+}
+
+.profile-form input {
+  padding: 10px 12px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  font-size: 1.5em;
+  width: 100%;
+}
+
+.profile-form button {
+  border-width: 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  margin-top: 20px;
+  letter-spacing: 2px;
+}
+.profile-top {
+  display: flex;
+  flex-direction: column;
+}
+
+.show-img img {
+  display: block;
+  margin: auto;
+  width: 150px;
+  border-radius: 50%;
+}
+
+.profile-top label {
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+  text-align: center;
+  width: 200px;
+  background-color: #90ee90;
+  /* padding: 7px 13px; */
+  border-radius: 36px;
+}
+
+/* profile ends  */
+
+/* courses starts */
+.course-header {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 3rem;
+}
+
+.courses-card {
+  width: 80%;
+  margin: 0 auto;
+  border: 3px solid lightgray;
+  border-radius: 10px;
+  margin-top: 30px;
+}
+
+.courses-card .btn.btn-link {
+  font-size: 2rem;
+  color: black;
+  /* font-weight: 700; */
+}
+
+.courses-card h5 {
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+  font-size: 1.6rem;
+}
+
+.course-video {
+  width: 50%;
+  margin: 20px auto;
+  height: 315px;
+}
+iframe {
+  width: 100%;
+  /* height: auto; */
+}
+
+/* .btn:active:focus{
+  outline-offset: no;
+} */
+.btn:active:focus,
+.btn:focus {
+  outline: none;
+  outline-offset: 0;
+}
+
+.courses-card .card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-body button {
+  border-width: 0;
+  /* text-transform: uppercase; */
+  /* font-weight: bold; */
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+/* courses ends */
+
+.required:after {
+  content: " *";
+  color: red;
+}
+
+/* button {
+  margin-top: 30px;
+  border-radius: 36px;
+  background: #90ee90;
+  border: 0;
+  text-transform: uppercase;
+  font-weight: 700;
   font-size: 0.8em;
+  display: block;
+  padding: 10px 16px;
+  letter-spacing: 2px;
+} */
+.error {
+  color: red;
+  margin: 10px 2px;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.hi-text {
+  text-align: center;
+  margin-top: 20px;
 }
 
 footer {
   text-align: center;
-  margin-top: 120px;
+  margin-top: 60px;
+  margin-bottom: 60px;
   color: #aaa;
+  font-size: 1.8rem;
 }
 
 @media (max-width: 459px) {
+  .home-header {
+    margin-top: 100px;
+  }
   nav {
     display: flex;
     /* margin: 2.5% 5% 0 5%; */
@@ -158,9 +376,9 @@ footer {
   }
 
   .hi-text {
-    font-size: 20px;
+    font-size: 15px;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 30px;
   }
 
   .headings {
@@ -176,77 +394,278 @@ footer {
   }
 
   .headings h1 {
-    font-size: 1.5rem;
+    font-size: 2rem;
 
-    margin-bottom: 10px;
+    margin-bottom: 15px;
   }
   .headings h3 {
-    font-size: 1rem;
+    font-size: 1.4rem;
     margin-bottom: 10px;
     margin-left: 2px;
     color: #999;
   }
 
-  nav {
+  .headings a {
+    margin-top: 20px;
+    padding: 8px 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: inline-block;
+    font-size: 1em;
+  }
+
+  .nav-header {
     display: flex;
     /* margin: 2.5% 5% 0 5%; */
-    padding: 1rem;
+    padding: 1.5rem;
     justify-content: space-between;
     /* align-items: flex-end; */
     /* margin-bottom: 120px; */
   }
-  nav ul {
+  .nav-header ul {
     display: flex;
     align-items: center;
   }
   /* nav li {
     margin-left: 20px;
   } */
-  nav li a {
+  .nav-header li a {
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 0.7em;
+    font-size: 1em;
     display: block;
-    padding: 10px 16px;
+    padding: 8px 12px;
     letter-spacing: 1px;
   }
-  footer {
-    text-align: center;
-    margin-top: 30px;
-    color: #aaa;
-    font-size: 1rem;
-  }
 
-  form {
-    width: 70%;
-    margin: 20px auto;
-    padding: 20px;
-    box-shadow: 0.5px 1px 1.5px rgba(0, 0, 0, 0.1);
+  /* login form starts */
+
+  .login-form {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 3rem;
+    padding: 25px;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     background: white;
   }
 
-  form h2 {
-    font-size: 1.4em;
+  .login-form h2 {
+    font-size: 2em;
     font-weight: 900;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
   }
 
-  input {
-    padding: 10px 12px;
-    border-radius: 4px;
-    border: 1px solid #ddd;
-    font-size: 0.8em;
-    width: 100%;
-  }
-
-  label {
-    font-size: 0.8em;
+  .login-form label {
+    font-size: 1.4rem;
     display: block;
     margin: 20px 0 10px;
   }
 
-  form button {
+  .login-form input {
+    padding: 8px 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    font-size: 1.1em;
+    width: 100%;
+  }
+
+  .login-form button {
+    border-width: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 7px 12px;
+    font-size: 1.2rem;
+    margin-top: 10px;
+  }
+
+  /* login form ends   */
+
+  /* signup form starts */
+  .signup-form {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background: white;
+  }
+
+  .signup-form h2 {
+    font-size: 2em;
+    font-weight: 900;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .signup-form label {
+    font-size: 1.4rem;
+    display: block;
+    margin: 10px 0 7px;
+  }
+
+  .signup-form input {
+    padding: 8px 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    font-size: 1.1em;
+    width: 100%;
+  }
+
+  .signup-form button {
+    border-width: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 7px 12px;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    letter-spacing: 2px;
+  }
+
+  /* signup ends  */
+
+  /* profile starts  */
+
+  .profile-form {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background: white;
+  }
+
+  .profile-name {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: bold;
+  }
+  /* .profile-form h2 {
+    font-size: 3em;
+    font-weight: 900;
+    margin-bottom: 20px;
+    text-align: center;
+  } */
+
+  .profile-form label {
+    font-size: 1.4rem;
+    margin: 20px 0 10px;
+  }
+
+  .profile-form input {
+    padding: 7px 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    font-size: 1.2em;
+    width: 100%;
+  }
+
+  .profile-form button {
+    border-width: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 7px 15px;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    letter-spacing: 1px;
+  }
+  .profile-top {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .show-img img {
+    display: block;
+    margin: auto;
+    width: 90px;
+    border-radius: 50%;
+  }
+
+  .profile-top label {
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
+    width: 120px;
+    font-size: 1.3rem;
+    background-color: #90ee90;
+    /* padding: 7px 13px; */
+    border-radius: 36px;
+  }
+
+  /* profile ends  */
+
+  /* courses starts */
+  .course-header {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 2.3rem;
+  }
+
+  .courses-card {
+    width: 90%;
+    margin: 0 auto;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+
+  .courses-card .btn.btn-link {
+    font-size: 1.4rem;
+    padding: inherit;
+    color: black;
+    font-weight: 500;
+  }
+
+  .courses-card h5 {
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+    font-size: 1.2rem;
+  }
+
+  .course-video {
+    width: 90%;
+    margin: 13px auto;
+    height: auto;
+  }
+  iframe {
+    width: 100%;
+    height: auto;
+  }
+
+  /* .btn:active:focus{
+  outline-offset: no;
+} */
+  .btn:active:focus,
+  .btn:focus {
+    outline: none;
+    outline-offset: 0;
+  }
+
+  .courses-card .card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-body button {
+    border-width: 0;
+    /* text-transform: uppercase; */
+    /* font-weight: bold; */
+    padding: 6px 13px;
+    font-size: 1rem;
+    margin: 7px 0;
+  }
+  /* courses ends */
+
+  footer {
+    text-align: center;
+    margin-top: 30px;
+    color: #aaa;
+    font-size: 1.2rem;
+  }
+
+  /* form button {
     margin-top: 30px;
     border-radius: 36px;
     background: #90ee90;
@@ -257,5 +676,5 @@ footer {
     display: block;
     padding: 7px 13px;
     letter-spacing: 1px;
-  }
+  } */
 }
