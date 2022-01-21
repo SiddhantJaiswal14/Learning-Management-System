@@ -1,6 +1,5 @@
 const { User, Task } = require("../models/User");
 const jwt = require("jsonwebtoken");
-// const { checkUser } = require("../middleware/authMiddleware");
 require("dotenv").config();
 
 //handle errors
@@ -85,33 +84,33 @@ module.exports.logout_get = (req, res) => {
   res.redirect("/");
 };
 
-module.exports.addOrEdit_get = (req, res) => {
-  res.render("addOrEdit");
-};
+// module.exports.create_get = (req, res) => {
+//   res.render("create");
+// };
 
-module.exports.addOrEdit_post = async (req, res) => {
-  const { description, completed, deadline } = req.body;
-  const token = req.cookies.jwt;
-  let userid;
-  jwt.verify(token, `${process.env.secret_key}`, async (err, decodedToken) => {
-    if (err) {
-      console.log(err.message);
-      res.locals.user = null;
-    } else {
-      userid = decodedToken.id;
-    }
-  });
+// module.exports.create_post = async (req, res) => {
+//   const { description, completed, deadline } = req.body;
+//   const token = req.cookies.jwt;
+//   let userid;
+//   jwt.verify(token, `${process.env.secret_key}`, async (err, decodedToken) => {
+//     if (err) {
+//       console.log(err.message);
+//       res.locals.user = null;
+//     } else {
+//       userid = decodedToken.id;
+//     }
+//   });
 
-  try {
-    const task = await Task.create({
-      user: userid,
-      description: description,
-      completed: completed,
-      deadline: deadline,
-    });
-    // alert("Task created successfully!!");
-    res.status(201).json({ task: task._id });
-  } catch (err) {
-    console.log(err);
-  }
-};
+//   try {
+//     const task = await Task.create({
+//       user: userid,
+//       description: description,
+//       completed: completed,
+//       deadline: deadline,
+//     });
+//     // alert("Task created successfully!!");
+//     res.status(201).json({ task: task._id });
+//   } catch (err) {
+//     console.log(err);
+//   }
+// };

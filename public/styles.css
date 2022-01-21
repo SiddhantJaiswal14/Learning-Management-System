@@ -382,6 +382,30 @@ iframe {
 
 /* add or edit ends */
 
+/* tasks starts here */
+.bttn {
+  padding: 7px 12px;
+  border-radius: 36px;
+  background: #90ee90;
+}
+
+.view-header {
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+  text-align: center;
+  font-size: 3rem;
+}
+
+.add-task {
+  font-size: 1.5rem;
+}
+
+.view-form {
+  margin-top: 20px;
+}
+
+/* tasks ends here*/
+
 .required:after {
   content: " *";
   color: red;
@@ -778,6 +802,29 @@ footer {
   }
 
   /* add or edit ends */
+
+  /* tasks starts here */
+
+  .view-header {
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  .add-task {
+    font-size: 1.2rem;
+  }
+
+  .view-form {
+    margin-top: 20px;
+  }
+
+  .thead-dark {
+    font-size: 1.2rem;
+  }
+
+  /* tasks ends here*/
 
   footer {
     text-align: center;

@@ -9,39 +9,42 @@ router.post("/signup", authController.signup_post);
 router.get("/login", authController.login_get);
 router.post("/login", authController.login_post);
 router.get("/logout", authController.logout_get);
-router.get("/addOrEdit", authController.addOrEdit_get);
-router.post("/addOrEdit", authController.addOrEdit_post);
-router.post("/profile", async (req, res) => {
-  const { profession, address, phone, age, skills } = req.body;
-  //   console.log(req.body._id);
-  //   try {
-  //     const user = await User.findByIdAndUpdate(
-  //       req.body._id,
-  //       {
-  //         profession,
-  //         address,
 
-  //         phone,
-  //         age,
-  //         skills,
-  //       },
-  //       function (err, docs) {
-  //         if (err) {
-  //           console.log(err);
-  //         } else {
-  //           console.log("hello");
-  //           console.log(docs);
-  //         }
-  //       }
-  //     );
-  //     //   const token = createToken(user._id);
-  //     //   res.cookie("jwt", token, { httpOnly: true, maxAge: maxAge * 1000 });
-  //     //   res.status(201).json({ user: user._id });
-  //   } catch (err) {
-  //     //   const errors = handleErrors(err);
-  //     //   res.status(400).json({ errors });
-  //     console.log(error);
-  //   }
-});
+// router.get("/create", authController.create_get);
+
+// router.post("/create", authController.create_post);
+
+// router.post("/profile", async (req, res) => {
+//   const { profession, address, phone, age, skills } = req.body;
+//   //   console.log(req.body._id);
+//   //   try {
+//   //     const user = await User.findByIdAndUpdate(
+//   //       req.body._id,
+//   //       {
+//   //         profession,
+//   //         address,
+
+//   //         phone,
+//   //         age,
+//   //         skills,
+//   //       },
+//   //       function (err, docs) {
+//   //         if (err) {
+//   //           console.log(err);
+//   //         } else {
+//   //           console.log("hello");
+//   //           console.log(docs);
+//   //         }
+//   //       }
+//   //     );
+//   //     //   const token = createToken(user._id);
+//   //     //   res.cookie("jwt", token, { httpOnly: true, maxAge: maxAge * 1000 });
+//   //     //   res.status(201).json({ user: user._id });
+//   //   } catch (err) {
+//   //     //   const errors = handleErrors(err);
+//   //     //   res.status(400).json({ errors });
+//   //     console.log(error);
+//   //   }
+// });
 
 module.exports = router;

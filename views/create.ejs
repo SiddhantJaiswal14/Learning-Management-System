@@ -42,7 +42,7 @@
     const completed = form.completed.value;
     const deadline = form.deadline.value;
     try {
-      const res = await fetch("/addOrEdit", {
+      const res = await fetch("/create", {
         method: "POST",
         body: JSON.stringify({
           description,

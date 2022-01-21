@@ -1,7 +1,44 @@
 <%- include('partials/header'); -%>
 
-<h2 class="view-header">Tasks</h2>
+<h2 class="view-header">Task Management System</h2>
+<main id="site-main">
+  <div class="container">
+    <a href="/create" class="add-task">
+      <span class="text-gradient bttn"
+        >Create Task <i class="fa fa-file"></i
+      ></span>
+    </a>
 
-<a href="/addOrEdit">Create/Update</a>
+    <form class="view-form" action="" method="POST">
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th>Description</th>
+            <th>Completed</th>
+            <th>Deadline</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Details</td>
+            <td>Yes/No</td>
+            <td>Date</td>
+            <td>
+              <a href="/update" class="btn border-shadow update"
+                ><span class="text-gradient"><i class="fa fa-pencil"></i></span
+              ></a>
+              <a class="btn border-shadow delete"
+                ><span class="text-gradient"><i class="fa fa-times"></i></span
+              ></a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+  </div>
+</main>
+
+<!-- <a href="/">Create/Update</a> -->
 
 <%- include('partials/footer'); -%>

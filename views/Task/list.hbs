@@ -1,0 +1,35 @@
+<h2 class="view-header">All Tasks</h2>
+<a href="/task" class="add-task"><span class="bttn">Create Task
+    <i class="fa fa-file"></i></span></a>
+<div class="table-responsive">
+  <table class="table-striped table-bordered table-hover table-responsive">
+    <thead>
+      <tr class="table-active">
+        <th class="task-info">Description</th>
+        <th class="task-info">Completed</th>
+        <th class="task-info">Deadline</th>
+        <th class="task-info">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each list}}
+        <tr>
+          <td class="data">{{this.description}}</td>
+          <td class="data">{{this.completed}}</td>
+          <td class="data">{{this.deadline}}</td>
+          <td class="edit">
+            <a href="/task/{{this._id}}">
+              <i class="fa fa-edit fa-lg fa-blue" aria-hidden="true"></i>
+            </a>
+            <a
+              href="/task/delete/{{this._id}}"
+              onclick="return confirm('Are you sure to delete it?');"
+            >
+              <i class="fa fa-trash fa-lg fa-red" aria-hidden="true"></i>
+            </a>
+          </td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>
