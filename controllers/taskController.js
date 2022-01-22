@@ -1,22 +1,18 @@
 const express = require("express");
-
 const { requireAuth } = require("../middleware/authMiddleware");
-// include the model class
-
 const { Task } = require("../models/User");
-
 const router = express.Router();
 
+// get request for task page
 router.get("/task", requireAuth, (req, res) => {
   res.render("task/addorEdit.hbs", {
     viewTitle: "Create Task",
   });
 });
 
-//handling post request
+// post request for task page
 router.post("/task", (req, res) => {
-  // check if this post is for creation of record or the updation
-
+  // check if this post request is for creation of record or the updation of record
   if (req.body._id == "") {
     insertRecord(req, res);
   } else {
@@ -24,13 +20,14 @@ router.post("/task", (req, res) => {
   }
 });
 
+// creation of task
 function insertRecord(req, res) {
   var task = new Task();
   task.description = req.body.description;
   task.completed = req.body.completed;
   task.deadline = req.body.deadline;
 
-  //check for validation
+  // validation check
   if (task.description == "" || task.completed == "" || task.deadline == "") {
     res.render("task/addOrEdit.hbs", {
       viewTitle: "Create Task",
@@ -41,17 +38,15 @@ function insertRecord(req, res) {
   }
 
   task.save((err, doc) => {
-    //if no error
     if (!err) {
       res.redirect("task/list");
     } else {
-      // if err is there
       console.log("An error is there in insertion of record" + err);
     }
   });
 }
 
-//route for displaying users
+// get request for view task page
 
 router.get("/task/list", requireAuth, (req, res) => {
   Task.find({})
@@ -65,6 +60,7 @@ router.get("/task/list", requireAuth, (req, res) => {
     });
 });
 
+//get request for edit task
 router.get("/task/:id", (req, res) => {
   Task.findById(req.params.id, (err, doc) => {
     if (!err) {
@@ -76,6 +72,7 @@ router.get("/task/:id", (req, res) => {
   });
 });
 
+// get request for delete task
 router.get("/task/delete/:id", (req, res) => {
   Task.findByIdAndRemove(req.params.id, (err, doc) => {
     if (!err) {
@@ -86,17 +83,16 @@ router.get("/task/delete/:id", (req, res) => {
   });
 });
 
+// updation of task
 function updateRecord(req, res) {
   Task.findOneAndUpdate(
     { _id: req.body._id },
     req.body,
     { new: true },
     (err, doc) => {
-      // if no error
       if (!err) {
         res.redirect("task/list");
       } else {
-        // if any err
         console.log("Error occured in updating record" + err);
       }
     }

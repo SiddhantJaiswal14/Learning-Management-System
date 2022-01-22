@@ -56,6 +56,9 @@ const userSchema = new mongoose.Schema({
   profession: {
     type: String,
   },
+  image: {
+    type: String,
+  },
   lesson1: {
     type: String,
   },
@@ -70,13 +73,7 @@ const userSchema = new mongoose.Schema({
   },
 });
 
-// //fire a function after doc is saved to db
-// userSchema.post("save", function (doc, next) {
-//   console.log("new user was created and saved", doc);
-//   next();
-// });
-
-//fire a function before a doc is saved to db
+//hashing the password before saving it to database
 userSchema.pre("save", async function (next) {
   const salt = await bcrypt.genSalt();
   this.password = await bcrypt.hash(this.password, salt);
@@ -84,7 +81,6 @@ userSchema.pre("save", async function (next) {
 });
 
 // static method to login user
-
 userSchema.statics.login = async function (email, password) {
   const user = await this.findOne({ email });
   if (user) {

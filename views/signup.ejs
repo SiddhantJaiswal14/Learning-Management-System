@@ -49,14 +49,13 @@
   const form = document.querySelector("form");
   const emailError = document.querySelector(".email.error");
   const passwordError = document.querySelector(".password.error");
+
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
-
-    //reset errors
+    //reset errors if signup failed
     emailError.textContent = "";
     passwordError.textContent = "";
 
-    // get the values
     const email = form.email.value;
     const password = form.password.value;
     const firstname = form.firstname.value;

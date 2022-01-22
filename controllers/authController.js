@@ -37,14 +37,18 @@ const maxAge = 24 * 60 * 60;
 const createToken = (id) => {
   return jwt.sign({ id }, `${process.env.secret_key}`, { expiresIn: maxAge });
 };
+
+// Get request for signup page
 module.exports.signup_get = (req, res) => {
   res.render("signup");
 };
 
+// Get request for login page
 module.exports.login_get = (req, res) => {
   res.render("login");
 };
 
+// Post request for signup page
 module.exports.signup_post = async (req, res) => {
   const { firstname, lastname, email, password, phone, age, skills } = req.body;
   try {
@@ -66,6 +70,7 @@ module.exports.signup_post = async (req, res) => {
   }
 };
 
+// Post request for login page
 module.exports.login_post = async (req, res) => {
   const { email, password } = req.body;
   try {
@@ -79,15 +84,18 @@ module.exports.login_post = async (req, res) => {
   }
 };
 
+// Get request for logout
 module.exports.logout_get = (req, res) => {
   res.cookie("jwt", "", { maxAge: 1 });
   res.redirect("/");
 };
 
+// Get request for profile page
 module.exports.profile_get = (req, res) => {
   res.render("profile");
 };
 
+// Post request for profile page
 module.exports.profile_post = (req, res) => {
   const { profession, phone, address, age, skills } = req.body;
   const token = req.cookies.jwt;
@@ -125,10 +133,12 @@ module.exports.profile_post = (req, res) => {
   }
 };
 
+// Get request for courses page
 module.exports.courses_get = (req, res) => {
   res.render("courses");
 };
 
+// Post request for courses page
 module.exports.courses_post = (req, res) => {
   const { lesson1, lesson2, lesson3, lesson4 } = req.body;
   console.log("Hello from course");

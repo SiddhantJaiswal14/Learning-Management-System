@@ -2,11 +2,11 @@ const jwt = require("jsonwebtoken");
 const { User } = require("../models/User");
 require("dotenv").config();
 
-// will apply this to any routes that requires authentication
+//  Applied this to all routes that required authentication
 const requireAuth = (req, res, next) => {
   const token = req.cookies.jwt;
 
-  // check json web token exists and is verified
+  // check if json web token exists and is verified
   if (token) {
     jwt.verify(token, `${process.env.secret_key}`, (err, decodedToken) => {
       if (err) {
@@ -22,7 +22,7 @@ const requireAuth = (req, res, next) => {
   }
 };
 
-// check current user
+// check current user logged in
 const checkUser = (req, res, next) => {
   const token = req.cookies.jwt;
 
