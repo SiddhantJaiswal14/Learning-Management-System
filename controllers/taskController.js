@@ -11,7 +11,7 @@ router.get("/addOrEdit/", requireAuth, (req, res) => {
 });
 
 // post request for task page
-router.post("/addOrEdit", (req, res) => {
+router.post("/addOrEdit/", (req, res) => {
   // check if this post request is for creation of record or the updation of record
   if (req.body._id == "") {
     insertRecord(req, res);
