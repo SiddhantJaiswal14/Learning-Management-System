@@ -15,6 +15,7 @@ const taskController = require("./controllers/taskController");
 const { requireAuth, checkUser } = require("./middleware/authMiddleware");
 require("dotenv").config();
 
+const port = process.env.PORT || 5000;
 const app = express();
 
 //middleware
@@ -43,7 +44,7 @@ app.engine("hbs", hbs.engine);
 const dbURI = `mongodb+srv://${process.env.useraccess}:${process.env.password}@cluster0.m7xi6.mongodb.net/LMS`;
 mongoose
   .connect(dbURI)
-  .then((result) => app.listen(5000))
+  .then((result) => app.listen(port))
   .catch((err) => console.log(err));
 
 //routes
