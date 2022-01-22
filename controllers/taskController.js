@@ -1,12 +1,13 @@
 const express = require("express");
 
+const { requireAuth } = require("../middleware/authMiddleware");
 // include the model class
 
 const { Task } = require("../models/User");
 
 const router = express.Router();
 
-router.get("/task", (req, res) => {
+router.get("/task", requireAuth, (req, res) => {
   res.render("task/addorEdit.hbs", {
     viewTitle: "Create Task",
   });
@@ -52,7 +53,7 @@ function insertRecord(req, res) {
 
 //route for displaying users
 
-router.get("/task/list", (req, res) => {
+router.get("/task/list", requireAuth, (req, res) => {
   Task.find({})
     .lean()
     .exec((err, docs) => {
