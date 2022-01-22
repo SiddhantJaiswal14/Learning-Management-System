@@ -4,14 +4,14 @@ const { Task } = require("../models/User");
 const router = express.Router();
 
 // get request for task page
-router.get("/addOrEdit/", requireAuth, (req, res) => {
-  res.render("addorEdit.hbs", {
+router.get("/addOrEdit", requireAuth, (req, res) => {
+  res.render("addOrEdit.hbs", {
     viewTitle: "Create Task",
   });
 });
 
 // post request for task page
-router.post("/addOrEdit/", (req, res) => {
+router.post("/addOrEdit", (req, res) => {
   // check if this post request is for creation of record or the updation of record
   if (req.body._id == "") {
     insertRecord(req, res);
