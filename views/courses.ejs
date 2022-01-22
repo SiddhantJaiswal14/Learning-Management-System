@@ -1,46 +1,6 @@
 <%- include('partials/header'); -%>
 
 <h2 class="course-header">Course Content</h2>
-<!-- <div class="courses-card">
-  <h5 class="card-header">Lesson 1: Web Development Fundamentals</h5>
-  <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">
-      With supporting text below as a natural lead-in to additional content.
-    </p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-<div class="courses-card">
-  <h5 class="card-header">Lesson 2: HTML</h5>
-  <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">
-      With supporting text below as a natural lead-in to additional content.
-    </p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-<div class="courses-card">
-  <h5 class="card-header">Lesson 3: CSS</h5>
-  <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">
-      With supporting text below as a natural lead-in to additional content.
-    </p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-<div class="courses-card">
-  <h5 class="card-header">Lesson 4: Javascript</h5>
-  <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">
-      With supporting text below as a natural lead-in to additional content.
-    </p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div> -->
 
 <div id="accordion">
   <div class="courses-card">
@@ -79,7 +39,19 @@
             allowfullscreen
           ></iframe>
         </div>
-        <button class="bttn">Mark as Completed</button>
+        <form action="/courses" method="POST" class="lesson">
+          <% if(!user.lesson1) {%>
+          <h4><b>Current Status:</b> Incomplete</h4>
+          <% } else { %>
+          <h4><b>Current Status:</b> <%=user.lesson1%></h4>
+          <% } %>
+          <label for="lesson1"><b>Update Status</b></label>
+          <select name="lesson1" id="lesson1">
+            <option value="Completed">Completed</option>
+            <option value="Incomplete">Incomplete</option>
+          </select>
+          <button class="bttn">Update</button>
+        </form>
       </div>
     </div>
   </div>
@@ -120,7 +92,19 @@
             allowfullscreen
           ></iframe>
         </div>
-        <button class="bttn">Mark as Completed</button>
+        <form action="/courses" method="POST" class="lesson">
+          <% if(!user.lesson2) {%>
+          <h4><b>Current Status:</b> Incomplete</h4>
+          <% } else { %>
+          <h4><b>Current Status:</b> <%=user.lesson2%></h4>
+          <% } %>
+          <label for="lesson2"><b>Update Status</b></label>
+          <select name="lesson2" id="lesson2">
+            <option value="Completed">Completed</option>
+            <option value="Incomplete">Incomplete</option>
+          </select>
+          <button class="bttn">Update</button>
+        </form>
       </div>
     </div>
   </div>
@@ -161,7 +145,19 @@
             allowfullscreen
           ></iframe>
         </div>
-        <button class="bttn">Mark as Completed</button>
+        <form action="/courses" method="POST" class="lesson">
+          <% if(!user.lesson3) {%>
+          <h4><b>Current Status:</b> Incomplete</h4>
+          <% } else { %>
+          <h4><b>Current Status:</b> <%=user.lesson3%></h4>
+          <% } %>
+          <label for="lesson3"><b>Update Status</b></label>
+          <select name="lesson3" id="lesson3">
+            <option value="Completed">Completed</option>
+            <option value="Incomplete">Incomplete</option>
+          </select>
+          <button class="bttn">Update</button>
+        </form>
       </div>
     </div>
   </div>
@@ -203,7 +199,19 @@
             allowfullscreen
           ></iframe>
         </div>
-        <button class="bttn">Mark as Completed</button>
+        <form action="/courses" method="POST" class="lesson">
+          <% if(!user.lesson4) {%>
+          <h4><b>Current Status:</b> Incomplete</h4>
+          <% } else { %>
+          <h4><b>Current Status:</b> <%=user.lesson4%></h4>
+          <% } %>
+          <label for="lesson4"><b>Update Status</b></label>
+          <select name="lesson4" id="lesson4">
+            <option value="Completed">Completed</option>
+            <option value="Incomplete">Incomplete</option>
+          </select>
+          <button class="bttn">Update</button>
+        </form>
       </div>
     </div>
   </div>

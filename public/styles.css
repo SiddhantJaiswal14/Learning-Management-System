@@ -269,6 +269,7 @@ a:hover {
   margin-top: 2rem;
   text-align: center;
   font-size: 3rem;
+  font-weight: bold;
 }
 
 .courses-card {
@@ -324,6 +325,31 @@ iframe {
   font-size: 1.5rem;
   margin: 10px 0;
 }
+.lesson {
+  display: flex;
+  align-items: center;
+}
+
+.lesson h4 {
+  margin-right: 30px;
+}
+
+.lesson label {
+  margin-right: 10px;
+  font-size: 1.7rem;
+  font-weight: normal;
+}
+
+.lesson select {
+  /* margin-left: 10px; */
+  padding: 7px;
+  font-size: 1.5rem;
+}
+
+.lesson button {
+  margin-left: 30px;
+}
+
 /* courses ends */
 
 /* add or edit starts*/
@@ -681,6 +707,7 @@ footer {
     margin-top: 2rem;
     text-align: center;
     font-size: 2.3rem;
+    font-weight: bold;
   }
 
   .courses-card {
@@ -713,6 +740,35 @@ footer {
     width: 100%;
     height: auto;
   }
+
+  .lesson {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .lesson h4 {
+    font-size: 1.2rem;
+    margin-right: 0;
+  }
+
+  .lesson label {
+    margin-top: 10px;
+    margin-right: 0;
+    font-size: 1.1rem;
+    font-weight: normal;
+    text-align: center;
+  }
+
+  .lesson select {
+    /* margin-left: 10px; */
+    padding: 3px;
+    font-size: 1rem;
+    margin-top: 7px;
+  }
+  /* 
+  .lesson button {
+    margin-left: 30px;
+  } */
 
   /* .btn:active:focus{
   outline-offset: no;

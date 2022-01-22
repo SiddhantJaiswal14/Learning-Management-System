@@ -66,9 +66,12 @@ mongoose
 //routes
 app.get("*", checkUser);
 app.get("/", (req, res) => res.render("home"));
-app.get("/courses", requireAuth, (req, res) => res.render("courses"));
+
+app.get("/courses", requireAuth, authController.courses_get);
+app.post("/courses", requireAuth, authController.courses_post);
 app.get("/profile", requireAuth, authController.profile_get);
 app.post("/profile", requireAuth, authController.profile_post);
+
 // app.get("/profile", requireAuth, (req, res) => res.render("profile"));
 app.use(taskController);
 app.use(authRoutes);

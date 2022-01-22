@@ -16,6 +16,7 @@ const taskSchema = new mongoose.Schema({
     type: String,
   },
 });
+
 const userSchema = new mongoose.Schema({
   firstname: {
     type: String,
@@ -53,6 +54,18 @@ const userSchema = new mongoose.Schema({
     type: String,
   },
   profession: {
+    type: String,
+  },
+  lesson1: {
+    type: String,
+  },
+  lesson2: {
+    type: String,
+  },
+  lesson3: {
+    type: String,
+  },
+  lesson4: {
     type: String,
   },
 });
