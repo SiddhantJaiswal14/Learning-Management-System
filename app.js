@@ -3,11 +3,10 @@ const mongoose = require("mongoose");
 const authRoutes = require("./routes/authRoutes");
 const cookieParser = require("cookie-parser");
 const bodyParser = require("body-parser");
-
-//video
 const path = require("path");
 const exphbs = require("express-handlebars");
 const Handlebars = require("handlebars");
+const authController = require("./controllers/authController");
 const {
   allowInsecurePrototypeAccess,
 } = require("@handlebars/allow-prototype-access");
@@ -66,13 +65,10 @@ mongoose
 
 //routes
 app.get("*", checkUser);
-
 app.get("/", (req, res) => res.render("home"));
 app.get("/courses", requireAuth, (req, res) => res.render("courses"));
+app.get("/profile", requireAuth, authController.profile_get);
+app.post("/profile", requireAuth, authController.profile_post);
 // app.get("/profile", requireAuth, (req, res) => res.render("profile"));
-// app.get("/tasks", requireAuth, (req, res) => {
-//   res.render("tasks");
-// });
-// app.get("/create", requireAuth, (req, res) => res.render("create"));
 app.use(taskController);
 app.use(authRoutes);

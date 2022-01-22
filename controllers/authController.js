@@ -1,4 +1,4 @@
-const { User, Task } = require("../models/User");
+const { User } = require("../models/User");
 const jwt = require("jsonwebtoken");
 require("dotenv").config();
 
@@ -84,9 +84,46 @@ module.exports.logout_get = (req, res) => {
   res.redirect("/");
 };
 
-// module.exports.create_get = (req, res) => {
-//   res.render("create");
-// };
+module.exports.profile_get = (req, res) => {
+  res.render("profile");
+};
+
+module.exports.profile_post = (req, res) => {
+  const { profession, phone, address, age, skills } = req.body;
+  const token = req.cookies.jwt;
+  let userid;
+  jwt.verify(token, `${process.env.secret_key}`, async (err, decodedToken) => {
+    if (err) {
+      console.log(err.message);
+      res.locals.user = null;
+    } else {
+      userid = decodedToken.id;
+    }
+  });
+
+  try {
+    User.findByIdAndUpdate(
+      userid,
+      {
+        profession,
+        phone,
+        address,
+        age,
+        skills,
+      },
+      function (err, docs) {
+        if (err) {
+          console.log(err);
+        } else {
+          console.log("Profile Updated");
+          res.redirect("profile");
+        }
+      }
+    );
+  } catch (err) {
+    console.log(err);
+  }
+};
 
 // module.exports.create_post = async (req, res) => {
 //   const { description, completed, deadline } = req.body;
