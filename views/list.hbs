@@ -1,5 +1,5 @@
 <h2 class="view-header">Task Management System</h2>
-<a href="/task" class="add-task"><span class="bttn">Create Task
+<a href="/addOrEdit" class="add-task"><span class="bttn">Create Task
     <i class="fa fa-file"></i></span></a>
 <div class="table-responsive">
   <table class="table-striped table-bordered table-hover table-responsive">
@@ -18,11 +18,11 @@
           <td class="data">{{this.completed}}</td>
           <td class="data">{{this.deadline}}</td>
           <td class="edit">
-            <a href="/task/{{this._id}}">
+            <a href="/addOrEdit/{{this._id}}">
               <i class="fa fa-edit fa-lg fa-blue" aria-hidden="true"></i>
             </a>
             <a
-              href="/task/delete/{{this._id}}"
+              href="/delete/{{this._id}}"
               onclick="return confirm('Are you sure to delete it?');"
             >
               <i class="fa fa-trash fa-lg fa-red" aria-hidden="true"></i>

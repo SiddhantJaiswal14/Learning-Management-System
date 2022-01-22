@@ -4,14 +4,14 @@ const { Task } = require("../models/User");
 const router = express.Router();
 
 // get request for task page
-router.get("/task", requireAuth, (req, res) => {
+router.get("/addOrEdit", requireAuth, (req, res) => {
   res.render("addorEdit.hbs", {
     viewTitle: "Create Task",
   });
 });
 
 // post request for task page
-router.post("/task", (req, res) => {
+router.post("/addOrEdit", (req, res) => {
   // check if this post request is for creation of record or the updation of record
   if (req.body._id == "") {
     insertRecord(req, res);
@@ -39,7 +39,7 @@ function insertRecord(req, res) {
 
   task.save((err, doc) => {
     if (!err) {
-      res.redirect("/list");
+      res.redirect("list");
     } else {
       console.log("An error is there in insertion of record" + err);
     }
@@ -61,7 +61,7 @@ router.get("/list", requireAuth, (req, res) => {
 });
 
 //get request for edit task
-router.get("/task/:id", (req, res) => {
+router.get("/addOrEdit/:id", (req, res) => {
   Task.findById(req.params.id, (err, doc) => {
     if (!err) {
       res.render("addOrEdit.hbs", {
@@ -73,10 +73,10 @@ router.get("/task/:id", (req, res) => {
 });
 
 // get request for delete task
-router.get("/task/delete/:id", (req, res) => {
+router.get("/delete/:id", (req, res) => {
   Task.findByIdAndRemove(req.params.id, (err, doc) => {
     if (!err) {
-      res.redirect("list");
+      res.redirect("/list");
     } else {
       console.log("Error occured during deletion" + err);
     }
