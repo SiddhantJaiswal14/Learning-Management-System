@@ -5,7 +5,7 @@ const router = express.Router();
 
 // get request for task page
 router.get("/task", requireAuth, (req, res) => {
-  res.render("task/addorEdit.hbs", {
+  res.render("addorEdit.hbs", {
     viewTitle: "Create Task",
   });
 });
@@ -29,7 +29,7 @@ function insertRecord(req, res) {
 
   // validation check
   if (task.description == "" || task.completed == "" || task.deadline == "") {
-    res.render("task/addOrEdit.hbs", {
+    res.render("addOrEdit.hbs", {
       viewTitle: "Create Task",
       error: "Please enter all details",
       task: req.body,
@@ -39,7 +39,7 @@ function insertRecord(req, res) {
 
   task.save((err, doc) => {
     if (!err) {
-      res.redirect("task/list");
+      res.redirect("/list");
     } else {
       console.log("An error is there in insertion of record" + err);
     }
@@ -48,12 +48,12 @@ function insertRecord(req, res) {
 
 // get request for view task page
 
-router.get("/task/list", requireAuth, (req, res) => {
+router.get("/list", requireAuth, (req, res) => {
   Task.find({})
     .lean()
     .exec((err, docs) => {
       if (!err) {
-        res.render("task/list.hbs", {
+        res.render("list.hbs", {
           list: docs,
         });
       }
@@ -64,7 +64,7 @@ router.get("/task/list", requireAuth, (req, res) => {
 router.get("/task/:id", (req, res) => {
   Task.findById(req.params.id, (err, doc) => {
     if (!err) {
-      res.render("task/addOrEdit.hbs", {
+      res.render("addOrEdit.hbs", {
         viewTitle: "Update Task",
         task: doc,
       });
@@ -76,7 +76,7 @@ router.get("/task/:id", (req, res) => {
 router.get("/task/delete/:id", (req, res) => {
   Task.findByIdAndRemove(req.params.id, (err, doc) => {
     if (!err) {
-      res.redirect("/task/list");
+      res.redirect("list");
     } else {
       console.log("Error occured during deletion" + err);
     }
@@ -91,7 +91,7 @@ function updateRecord(req, res) {
     { new: true },
     (err, doc) => {
       if (!err) {
-        res.redirect("task/list");
+        res.redirect("list");
       } else {
         console.log("Error occured in updating record" + err);
       }
