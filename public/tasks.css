@@ -4,7 +4,6 @@
   padding: 0;
 }
 body {
-  /* margin: 5% 10%; */
   font-size: 1.2rem;
   letter-spacing: 1px;
   background: #fafafa;
@@ -40,11 +39,8 @@ a:hover {
 /* nav-css starts */
 .nav-header {
   display: flex;
-  /* margin: 2.5% 5% 0 5%; */
   padding: 2rem 2rem;
   justify-content: space-between;
-  /* align-items: flex-end; */
-  /* margin-bottom: 120px; */
 }
 
 .nav-header h1 {
@@ -135,22 +131,10 @@ thead {
 }
 
 .add-form {
-  /* max-width: 360px; */
   width: 60%;
   margin: 2rem auto;
   border: 3px solid lightgray;
 }
-
-/* .add-form input {
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-right: 30px;
-}
-.add-form select {
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-right: 30px;
-} */
 
 .add-form input {
   width: 95%;
@@ -195,29 +179,19 @@ footer {
 @media (max-width: 459px) {
   nav {
     display: flex;
-    /* margin: 2.5% 5% 0 5%; */
     padding: 20px 20px;
     justify-content: space-between;
-    /* align-items: flex-end; */
-    /* margin-bottom: 120px; */
   }
 
   .nav-header {
     display: flex;
-    /* margin: 2.5% 5% 0 5%; */
     padding: 1.5rem;
-    /* justify-content: space-between; */
-    /* align-items: flex-end; */
-    /* margin-bottom: 120px; */
   }
   .nav-header ul {
     display: flex;
     align-items: center;
-    /* justify-content: flex-end; */
   }
-  /* nav li {
-    margin-left: 20px;
-  } */
+
   .nav-header li a {
     text-transform: uppercase;
     font-weight: 700;
@@ -279,22 +253,10 @@ footer {
   }
 
   .add-form {
-    /* max-width: 360px; */
     width: 85%;
     margin: 2rem auto;
     border: 1px solid lightgray;
   }
-
-  /* .add-form input {
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-right: 30px;
-  }
-  .add-form select {
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-right: 30px;
-  } */
 
   .add-form input {
     width: 95%;
@@ -306,6 +268,7 @@ footer {
     border-radius: 4px;
     box-sizing: border-box;
   }
+
   .add-form select {
     width: 95%;
     padding: 0 20px;

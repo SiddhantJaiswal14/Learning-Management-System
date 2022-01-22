@@ -1,11 +1,9 @@
-/* google fonts */
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
 * {
   margin: 0;
   padding: 0;
 }
 body {
-  /* margin: 5% 10%; */
   font-size: 1.2rem;
   letter-spacing: 1px;
   background: #fafafa;
@@ -41,11 +39,8 @@ a:hover {
 /* nav-css starts */
 .nav-header {
   display: flex;
-  /* margin: 2.5% 5% 0 5%; */
   padding: 2rem 2rem;
   justify-content: space-between;
-  /* align-items: flex-end; */
-  /* margin-bottom: 120px; */
 }
 
 .nav-header h1 {
@@ -71,7 +66,6 @@ a:hover {
 
 /* home css starts*/
 .headings {
-  /* margin: 5% 10%; */
   display: flex;
   margin-top: 7rem;
   flex-direction: column;
@@ -82,7 +76,6 @@ a:hover {
 
 .headings h1 {
   font-size: 4rem;
-  /* margin-top: 4rem; */
   margin-bottom: 10px;
 }
 .headings h3 {
@@ -209,16 +202,9 @@ a:hover {
   font-size: 3rem;
   font-weight: bold;
 }
-/* .profile-form h2 {
-  font-size: 3em;
-  font-weight: 900;
-  margin-bottom: 20px;
-  text-align: center;
-} */
 
 .profile-form label {
   font-size: 1.8rem;
-  /* display: block; */
   margin: 20px 0 10px;
 }
 
@@ -258,7 +244,6 @@ a:hover {
   text-align: center;
   width: 200px;
   background-color: #90ee90;
-  /* padding: 7px 13px; */
   border-radius: 36px;
 }
 
@@ -283,7 +268,6 @@ a:hover {
 .courses-card .btn.btn-link {
   font-size: 2rem;
   color: black;
-  /* font-weight: 700; */
 }
 
 .courses-card h5 {
@@ -299,12 +283,8 @@ a:hover {
 }
 iframe {
   width: 100%;
-  /* height: auto; */
 }
 
-/* .btn:active:focus{
-  outline-offset: no;
-} */
 .btn:active:focus,
 .btn:focus {
   outline: none;
@@ -319,8 +299,6 @@ iframe {
 
 .card-body button {
   border-width: 0;
-  /* text-transform: uppercase; */
-  /* font-weight: bold; */
   padding: 10px 20px;
   font-size: 1.5rem;
   margin: 10px 0;
@@ -341,7 +319,6 @@ iframe {
 }
 
 .lesson select {
-  /* margin-left: 10px; */
   padding: 7px;
   font-size: 1.5rem;
 }
@@ -361,15 +338,12 @@ iframe {
 }
 
 .add-form {
-  /* max-width: 360px; */
   width: 60%;
   margin: 2rem auto;
   border: 3px solid lightgray;
 }
 
 .add-form .row {
-  /* display: flex;
-  justify-content: space-between; */
   margin: 20px 0;
 }
 
@@ -377,15 +351,9 @@ iframe {
   font-size: 2rem;
 }
 
-/* .add-form .to-add {
-  display: flex;
-  justify-content: space-between;
-} */
-
 .desc-inp {
   width: 80%;
   margin: 10px auto;
-  /* height: 1.5rem; */
   padding: 6px 15px;
 }
 
@@ -399,8 +367,6 @@ iframe {
 
 .add-form button {
   border-width: 0;
-  /* text-transform: uppercase; */
-  /* font-weight: bold; */
   padding: 10px 20px;
   font-size: 1.5rem;
   margin: 10px 15px;
@@ -437,18 +403,6 @@ iframe {
   color: red;
 }
 
-/* button {
-  margin-top: 30px;
-  border-radius: 36px;
-  background: #90ee90;
-  border: 0;
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 0.8em;
-  display: block;
-  padding: 10px 16px;
-  letter-spacing: 2px;
-} */
 .error {
   color: red;
   margin: 10px 2px;
@@ -474,11 +428,8 @@ footer {
   }
   nav {
     display: flex;
-    /* margin: 2.5% 5% 0 5%; */
     padding: 20px 20px;
     justify-content: space-between;
-    /* align-items: flex-end; */
-    /* margin-bottom: 120px; */
   }
 
   .hi-text {
@@ -488,7 +439,6 @@ footer {
   }
 
   .headings {
-    /* margin: 5% 10%; */
     display: flex;
     width: 80%;
     margin: 0 auto;
@@ -501,9 +451,9 @@ footer {
 
   .headings h1 {
     font-size: 2rem;
-
     margin-bottom: 15px;
   }
+
   .headings h3 {
     font-size: 1.4rem;
     margin-bottom: 10px;
@@ -522,20 +472,14 @@ footer {
 
   .nav-header {
     display: flex;
-    /* margin: 2.5% 5% 0 5%; */
     padding: 1.5rem;
-    /* justify-content: space-between; */
-    /* align-items: flex-end; */
-    /* margin-bottom: 120px; */
   }
+
   .nav-header ul {
     display: flex;
     align-items: center;
-    /* justify-content: flex-end; */
   }
-  /* nav li {
-    margin-left: 20px;
-  } */
+
   .nav-header li a {
     text-transform: uppercase;
     font-weight: 700;
@@ -647,12 +591,6 @@ footer {
     font-size: 2.2rem;
     font-weight: bold;
   }
-  /* .profile-form h2 {
-    font-size: 3em;
-    font-weight: 900;
-    margin-bottom: 20px;
-    text-align: center;
-  } */
 
   .profile-form label {
     font-size: 1.4rem;
@@ -696,7 +634,6 @@ footer {
     width: 120px;
     font-size: 1.3rem;
     background-color: #90ee90;
-    /* padding: 7px 13px; */
     border-radius: 36px;
   }
 
@@ -760,19 +697,11 @@ footer {
   }
 
   .lesson select {
-    /* margin-left: 10px; */
     padding: 3px;
     font-size: 1rem;
     margin-top: 7px;
   }
-  /* 
-  .lesson button {
-    margin-left: 30px;
-  } */
 
-  /* .btn:active:focus{
-  outline-offset: no;
-} */
   .btn:active:focus,
   .btn:focus {
     outline: none;
@@ -787,8 +716,6 @@ footer {
 
   .card-body button {
     border-width: 0;
-    /* text-transform: uppercase; */
-    /* font-weight: bold; */
     padding: 6px 13px;
     font-size: 1rem;
     margin: 7px 0;
@@ -804,15 +731,12 @@ footer {
   }
 
   .add-form {
-    /* max-width: 360px; */
     width: 90%;
     margin: 2rem auto;
     border: 1px solid lightgray;
   }
 
   .add-form .row {
-    /* display: flex;
-  justify-content: space-between; */
     margin: 20px 0;
   }
 
@@ -825,7 +749,6 @@ footer {
   .desc-inp {
     width: 88%;
     margin: 10px 20px;
-    /* height: 1.5rem; */
     padding: 6px 15px;
   }
 
@@ -850,8 +773,6 @@ footer {
   .add-form button {
     border-width: 0;
     display: block;
-    /* text-transform: uppercase; */
-    /* font-weight: bold; */
     padding: 10px 20px;
     font-size: 1.5rem;
     margin: 10px auto;
@@ -888,17 +809,4 @@ footer {
     color: #aaa;
     font-size: 1.2rem;
   }
-
-  /* form button {
-    margin-top: 30px;
-    border-radius: 36px;
-    background: #90ee90;
-    border: 0;
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: 0.6em;
-    display: block;
-    padding: 7px 13px;
-    letter-spacing: 1px;
-  } */
 }
