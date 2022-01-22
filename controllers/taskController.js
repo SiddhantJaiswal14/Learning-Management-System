@@ -4,7 +4,7 @@ const { Task } = require("../models/User");
 const router = express.Router();
 
 // get request for task page
-router.get("/addOrEdit", requireAuth, (req, res) => {
+router.get("/addOrEdit/", requireAuth, (req, res) => {
   res.render("addorEdit.hbs", {
     viewTitle: "Create Task",
   });
